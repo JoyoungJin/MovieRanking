@@ -5,14 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    //메인
+    <!--//메인-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        //상단
+        <!--//상단-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:background="@drawable/gradient"
             android:orientation="horizontal">
 
-            //포스터 이미지
+            <!--//포스터 이미지-->
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
                 android:padding="10dp"
                 android:src="@drawable/image11" />
 
-            //포스터 설명
+            <!--//포스터 설명-->
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -44,15 +44,15 @@
                     android:orientation="horizontal"
                     android:paddingBottom="10dp">
 
-                    //영화 이름
+                    <!--//영화 이름-->
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="10dp"
-                        android:text="군도"
+                        android:text="@string/poster_name"
                         android:textColor="@android:color/white"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -62,16 +62,16 @@
 
                 </LinearLayout>
 
-                //포스터 설명 텍스트
+                <!--//포스터 설명 텍스트-->
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ReleaseDate"
                     android:textColor="@android:color/white"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
-                //좋아요 싫어요 버튼
+                <!--//좋아요 싫어요 버튼-->
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -81,32 +81,36 @@
                     android:paddingBottom="10dp">
 
                     <ImageView
+                        android:id="@+id/thumb_up_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_thumb_up" />
 
                     <TextView
+                        android:id="@+id/thumb_up_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="5dp"
-                        android:text="15"
+                        android:text="@string/thumbup_count"
                         android:textColor="@android:color/white"
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                     <ImageView
+                        android:id="@+id/thumb_down_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="20dp"
                         android:src="@drawable/ic_thumb_down" />
 
                     <TextView
+                        android:id="@+id/thumb_down_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="5dp"
-                        android:text="1"
+                        android:text="@string/thumbdown_count"
                         android:textColor="@android:color/white"
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -115,7 +119,7 @@
 
         </LinearLayout>
 
-        //영화 예매율,평점,누적관객수 레이아웃
+        <!--//영화 예매율,평점,누적관객수 레이아웃-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -124,7 +128,7 @@
             android:orientation="horizontal">
 
 
-            //예매율
+            <!--//예매율-->
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -136,13 +140,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="예매율" />
+                    android:text="@string/ticketing_count" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
-                    android:text="5위 1.8%"
+                    android:text="@string/ticketing_ranking"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -152,7 +156,7 @@
                 android:layout_height="match_parent"
                 android:background="#eeeeee" />
 
-            //평점
+            <!--//평점-->
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -164,7 +168,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="평점" />
+                    android:text="@string/rating" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -182,7 +186,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="8.2" />
+                        android:text="@string/rating_text" />
 
                 </LinearLayout>
 
@@ -193,7 +197,7 @@
                 android:layout_height="match_parent"
                 android:background="#eeeeee" />
 
-            //누적관객수
+            <!--//누적관객수-->
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -205,27 +209,27 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="누적관객수" />
+                    android:text="@string/attendance_textview_text" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
-                    android:text="839.399명"
+                    android:text="@string/attendance_text"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-        //구분선
+        <!--//구분선-->
 
         <View
             android:layout_width="match_parent"
             android:layout_height="10dp"
             android:background="#eeeeee" />
 
-        //줄거리
+        <!--//줄거리-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -236,7 +240,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="줄거리"
+                android:text="@string/story_textview_text"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -249,14 +253,14 @@
 
         </LinearLayout>
 
-        //구분선
+        <!--//구분선-->
 
         <View
             android:layout_width="match_parent"
             android:layout_height="10dp"
             android:background="#eeeeee" />
 
-        //감독/출연
+        <!--//감독/출연-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -267,9 +271,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="감독/출연"
+                android:text="@string/director_actor_text"
                 android:textColor="@android:color/black"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -283,15 +287,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="10dp"
-                    android:text="감독"
+                    android:text="@string/director_text"
                     android:textColor="@android:color/black"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="윤종빈"
-                    android:textSize="15dp" />
+                    android:text="@string/director_name"
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -304,28 +308,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="10dp"
-                    android:text="출연"
+                    android:text="@string/Starring"
                     android:textColor="@android:color/black"
-                    android:textSize="15dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="하정우(도치), 강동원(조윤)"
-                    android:textSize="15dp" />
+                    android:text="@string/Starrings_name"
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-        //구분선
+        <!--//구분선-->
 
         <View
             android:layout_width="match_parent"
             android:layout_height="10dp"
             android:background="#eeeeee" />
 
-        //한줄평
+        <!--//한줄평-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -342,9 +346,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="한줄평"
+                    android:text="@string/comment"
                     android:textColor="@android:color/black"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -361,9 +365,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="작성하기"
+                        android:text="@string/writing"
                         android:textColor="#ff561d"
-                        android:textSize="16dp"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -371,7 +375,7 @@
 
         </LinearLayout>
 
-        //모두보기 버튼
+        <!--//모두보기 버튼-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -382,18 +386,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/allview_button"
-                android:text="모두 보기" />
+                android:text="@string/allview_button_text" />
 
         </LinearLayout>
 
-        //구분선
+        <!--//구분선-->
 
         <View
             android:layout_width="match_parent"
             android:layout_height="10dp"
             android:background="#eeeeee" />
 
-        //하단 링크, 예매하기 버튼
+        <!--//하단 링크, 예매하기 버튼-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -422,7 +426,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ticketing_button"
-                    android:text="예매하기"
+                    android:text="@string/ticketing_button_text"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -431,7 +435,7 @@
 
         </LinearLayout>
 
-        //구분선
+        <!--//구분선-->
 
         <View
             android:layout_width="match_parent"
